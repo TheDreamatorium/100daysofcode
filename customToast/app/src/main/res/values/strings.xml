@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ToastTutorial</string>
+    <string name="error_msg">Sorry, an error has occurred :(</string>
+</resources>
