@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="8dp"
-    android:background="#DAAA"
+    android:background="@drawable/toast_background"
     >
     <LinearLayout
         android:layout_width="60dp"
@@ -25,6 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="#FFF"
+        android:textColor="#000"
         />
 </LinearLayout>

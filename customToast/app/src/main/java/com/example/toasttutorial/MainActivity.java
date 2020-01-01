@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button connectBtn = findViewById(R.id.connectBtn);
 
         //Inflating the layout custom layout created for the toast
         LayoutInflater inflater = getLayoutInflater();
@@ -32,11 +35,17 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.error);
 
         //Initialize the toast object and display it
-        Toast toast = new Toast(getApplicationContext());
+        final Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(customLayout);
-        toast.show();
 
+        //Settting on click event listener on fake connect button
+        connectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast.show();
+            }
+        });
     }
 }
