@@ -1,8 +1,10 @@
 package com.example.toasttutorial;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -12,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,11 +44,15 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(customLayout);
 
-        //Settting on click event listener on fake connect button
+        //Setting on click event listener on fake connect button
         connectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toast.show();
+
+//                toast.show();
+
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
             }
         });
     }
