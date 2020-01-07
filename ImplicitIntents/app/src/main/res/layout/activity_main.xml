@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editTxtWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:ems="10"
+            android:inputType="textUri"
+            android:hint="@string/url_hint"/>
+
+        <Button
+            android:id="@+id/btnWeb"
+            android:background="@drawable/btn_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:baselineAligned="false"
+            android:text="@string/btn_web_text"
+            android:onClick="openWebsite"/>
+
+        <EditText
+            android:id="@+id/editTxtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:hint="@string/location_hint" />
+
+        <Button
+            android:id="@+id/btnLocation"
+            android:background="@drawable/btn_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/btn_location_text"
+            android:onClick="openLocation"/>
+
+        <EditText
+            android:id="@+id/editTxtShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:ems="10"
+            android:inputType="textShortMessage"
+            android:hint="@string/share_hint" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:background="@drawable/btn_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/btn_share_text"
+            android:onClick="shareText"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
